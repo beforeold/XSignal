@@ -12,4 +12,6 @@
 
 - (XSignal *)map:(id(^)(id))f;
 
+- (XSignal *)filter:(BOOL(^)(id))f;
+
 @end
