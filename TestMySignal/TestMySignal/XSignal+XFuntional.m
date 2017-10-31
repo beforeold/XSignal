@@ -19,4 +19,13 @@
     }];
 }
 
+- (XSignal *)filter:(BOOL (^)(id))f {
+    return [[XSignal alloc] initWithGenerator:^XDisposable(XSubscriber *subscriber) {
+        return [self subscribeWithNextHandler:^(id next){ if(f(next)) [subscriber gotNext:next];}
+                                 errorHandler:^(id error) { [subscriber gotError:error]; }
+                            completionHandler:^{ [subscriber completed]; }];
+    }];
+}
+
+
 @end
