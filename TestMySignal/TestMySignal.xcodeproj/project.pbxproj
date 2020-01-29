@@ -16,7 +16,7 @@
 		BC21349F1F96E1F0000F121B /* XSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21349E1F96E1F0000F121B /* XSignal.m */; };
 		BC2134A21F96E384000F121B /* XSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A11F96E384000F121B /* XSubscriber.m */; };
 		BC2134A61F96F9AA000F121B /* UIButton+XSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A51F96F9AA000F121B /* UIButton+XSignal.m */; };
-		BC2134A91F9703CF000F121B /* XSignal+XFuntional.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A81F9703CF000F121B /* XSignal+XFuntional.m */; };
+		BC2134A91F9703CF000F121B /* XSignal+XOperators.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A81F9703CF000F121B /* XSignal+XOperators.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +37,8 @@
 		BC2134A31F96F33A000F121B /* IntroToReactive.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = IntroToReactive.md; sourceTree = "<group>"; };
 		BC2134A41F96F9AA000F121B /* UIButton+XSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+XSignal.h"; sourceTree = "<group>"; };
 		BC2134A51F96F9AA000F121B /* UIButton+XSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XSignal.m"; sourceTree = "<group>"; };
-		BC2134A71F9703CF000F121B /* XSignal+XFuntional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XSignal+XFuntional.h"; sourceTree = "<group>"; };
-		BC2134A81F9703CF000F121B /* XSignal+XFuntional.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XSignal+XFuntional.m"; sourceTree = "<group>"; };
+		BC2134A71F9703CF000F121B /* XSignal+XOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XSignal+XOperators.h"; sourceTree = "<group>"; };
+		BC2134A81F9703CF000F121B /* XSignal+XOperators.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XSignal+XOperators.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,17 +71,10 @@
 		BC2134861F96E1D8000F121B /* TestMySignal */ = {
 			isa = PBXGroup;
 			children = (
+				E409F3A823E162B9008FC503 /* XSignal */,
 				BC2134A31F96F33A000F121B /* IntroToReactive.md */,
 				BC2134871F96E1D8000F121B /* AppDelegate.h */,
 				BC2134881F96E1D8000F121B /* AppDelegate.m */,
-				BC21349D1F96E1F0000F121B /* XSignal.h */,
-				BC21349E1F96E1F0000F121B /* XSignal.m */,
-				BC2134A71F9703CF000F121B /* XSignal+XFuntional.h */,
-				BC2134A81F9703CF000F121B /* XSignal+XFuntional.m */,
-				BC2134A01F96E384000F121B /* XSubscriber.h */,
-				BC2134A11F96E384000F121B /* XSubscriber.m */,
-				BC2134A41F96F9AA000F121B /* UIButton+XSignal.h */,
-				BC2134A51F96F9AA000F121B /* UIButton+XSignal.m */,
 				BC21348A1F96E1D8000F121B /* ViewController.h */,
 				BC21348B1F96E1D8000F121B /* ViewController.m */,
 				BC21348D1F96E1D8000F121B /* Main.storyboard */,
@@ -91,6 +84,21 @@
 				BC2134961F96E1D8000F121B /* main.m */,
 			);
 			path = TestMySignal;
+			sourceTree = "<group>";
+		};
+		E409F3A823E162B9008FC503 /* XSignal */ = {
+			isa = PBXGroup;
+			children = (
+				BC21349D1F96E1F0000F121B /* XSignal.h */,
+				BC21349E1F96E1F0000F121B /* XSignal.m */,
+				BC2134A71F9703CF000F121B /* XSignal+XOperators.h */,
+				BC2134A81F9703CF000F121B /* XSignal+XOperators.m */,
+				BC2134A41F96F9AA000F121B /* UIButton+XSignal.h */,
+				BC2134A51F96F9AA000F121B /* UIButton+XSignal.m */,
+				BC2134A01F96E384000F121B /* XSubscriber.h */,
+				BC2134A11F96E384000F121B /* XSubscriber.m */,
+			);
+			path = XSignal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +177,7 @@
 				BC21349F1F96E1F0000F121B /* XSignal.m in Sources */,
 				BC2134891F96E1D8000F121B /* AppDelegate.m in Sources */,
 				BC2134A61F96F9AA000F121B /* UIButton+XSignal.m in Sources */,
-				BC2134A91F9703CF000F121B /* XSignal+XFuntional.m in Sources */,
+				BC2134A91F9703CF000F121B /* XSignal+XOperators.m in Sources */,
 				BC2134A21F96E384000F121B /* XSubscriber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

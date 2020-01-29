@@ -12,7 +12,7 @@
 
 @interface XSubscriberDisposable : NSObject
 
-- (instancetype)initWithSubscriber:(XSubscriber *)subscriber disposable:(XDisposable)XDisposable;
+- (instancetype)initWithSubscriber:(XSubscriber *)subscriber disposable:(XDisposable _Nullable)XDisposable;
 
 @end
 
@@ -53,13 +53,14 @@
     return self;
 }
 
-- (XDisposable)subscribeWithNextHandler:(void (^)(id))nextHandler
-                           errorHandler:(void (^)(id))errorHandler
-                      completionHandler:(void (^)(void))comletionHandler
++ (instancetype)signalWithGenerator:(XGenerator)generator {
+    return [[self alloc] initWithGenerator:generator];
+}
+
+- (XDisposable)subscribeWithNextHandler:(void (^)(id _Nullable))nextHandler
+                      completionHandler:(void (^)(NSError *_Nullable))comletionHandler
 {
-    XSubscriber *sub = [[XSubscriber alloc] initWithNextHandler:nextHandler
-                                                   errorHandler:errorHandler
-                                              completionHandler:comletionHandler];
+    XSubscriber *sub = [[XSubscriber alloc] initWithNextHandler:nextHandler completionHandler:comletionHandler];
     XDisposable subbedDisposable = _generator(sub);
     
     return [[XSubscriberDisposable alloc] initWithSubscriber:sub disposable:subbedDisposable];

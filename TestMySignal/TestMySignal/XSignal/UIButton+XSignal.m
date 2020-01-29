@@ -22,7 +22,7 @@
 @implementation XButtonTargetAction
 
 - (void)onClick:(id)sender {
-    [self.subscriber gotNext:sender];
+    [self.subscriber receiveNext:sender];
 }
 
 @end
