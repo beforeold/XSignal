@@ -57,6 +57,10 @@
     return [[self alloc] initWithGenerator:generator];
 }
 
+- (XDisposable)subscribeWithNextHandler:(void(^_Nullable)(id _Nullable))nextHandler {
+    return [self subscribeWithNextHandler:nextHandler completionHandler:nil];
+}
+
 - (XDisposable)subscribeWithNextHandler:(void (^)(id _Nullable))nextHandler
                       completionHandler:(void (^)(NSError *_Nullable))comletionHandler
 {

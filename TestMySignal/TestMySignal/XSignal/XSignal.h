@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XSubscriber.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,6 +21,8 @@ typedef XDisposable _Nullable(^XGenerator)(XSubscriber *subscriber);
 - (instancetype)initWithGenerator:(XGenerator)generator;
 
 + (instancetype)signalWithGenerator:(XGenerator)generator;
+
+- (XDisposable)subscribeWithNextHandler:(void(^_Nullable)(id _Nullable))nextHandler;
 
 - (XDisposable)subscribeWithNextHandler:(void(^_Nullable)(id _Nullable))nextHandler
                       completionHandler:(void(^_Nullable)(NSError *_Nullable error))comletionHandler;

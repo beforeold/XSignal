@@ -8,15 +8,14 @@
 
 #import "XSignal+XOperators.h"
 #import "XSubscriber.h"
+#import "XSGMap.h"
 
 @implementation XSignal (XOperators)
 
 - (XSignal *)map:(id (^)(id _Nullable))f {
-    return [[XSignal alloc] initWithGenerator:^XDisposable(XSubscriber *subscriber) {
-        return [self subscribeWithNextHandler:^(id _Nullable next) { [subscriber receiveNext:f(next)]; }
-                            completionHandler:^(NSError *_Nullable error){ [subscriber receiveCompletionWithError:error]; }];
-    }];
+    return [[XSGMap alloc] initWithSignal:self transform:f];
 }
+
 
 - (XSignal *)filter:(BOOL (^)(id _Nullable))f {
     return [[XSignal alloc] initWithGenerator:^XDisposable(XSubscriber *subscriber) {
