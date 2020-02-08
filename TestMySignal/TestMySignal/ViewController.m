@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 #import "XSignal.h"
-#import "UIButton+XSignal.h"
+#import "UIButton+XSGSupport.h"
 #import "XSignal+XOperators.h"
 #import "XSubscriber.h"
 
@@ -30,34 +30,35 @@
 }
 
 - (void)testSubscribe {
-    self.disposable = [self.button.x_signal subscribeWithNextHandler:^(id next) { NSLog(@"next -> %@", next); }];
+    self.disposable = [self.button.xsg_signal subscribeWithValueHandler:^(id next) { NSLog(@"next -> %@", next); }];
 }
 
 - (void)testMap {
-    self.disposable = [[self.button.x_signal
+    self.disposable = [[self.button.xsg_signal
                         map:^id(id next) { return @[next, next]; }]
-                        subscribeWithNextHandler:^(id next) { NSLog(@"next -> %@", next); }];
+                        subscribeWithValueHandler:^(id next) { NSLog(@"next -> %@", next); }];
 }
 
 - (void)testFilter {
-    self.disposable = [[[self.button.x_signal
+    self.disposable = [[[self.button.xsg_signal
                          map:^id _Nonnull(id _) { return @(arc4random_uniform(100)); }]
                          filter:^BOOL(id x) { return [x integerValue] > 50; }]
-                         subscribeWithNextHandler:^(id x) { NSLog(@"next: %@", x); }];
+                         subscribeWithValueHandler:^(id x) { NSLog(@"next: %@", x); }];
 }
 
 - (void)testFlatMap {
-    self.disposable = [[self.button.x_signal
+    XSGCompletion.failure(NSError.new);
+    self.disposable = [[self.button.xsg_signal
                         flatMap:^XSignal * _Nonnull(id _) { return [self plusOneSignal]; }]
-                        subscribeWithNextHandler:^(id x) { NSLog(@"flat next: %@", x); }
-                        completionHandler:^(NSError * error) { NSLog(@"flat map completed: %@", error); }];
+                        subscribeWithValueHandler:^(id x) { NSLog(@"flat next: %@", x); }
+                        completionHandler:^(XSGCompletion *completion) { NSLog(@"flat map completed: %@", completion.error); }];
 }
 
 - (XSignal *)plusOneSignal {
     return [XSignal signalWithGenerator:^XDisposable _Nullable(XSubscriber * _Nonnull subscriber) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [subscriber receiveNext:@(self.counter++)];
-            [subscriber receiveCompletionWithError:nil];
+            [subscriber receiveValue:@(self.counter++)];
+            [subscriber receiveCompletion:XSGCompletion.finished];
         });
         
         return nil;

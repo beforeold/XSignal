@@ -15,11 +15,12 @@
 		BC2134971F96E1D8000F121B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134961F96E1D8000F121B /* main.m */; };
 		BC21349F1F96E1F0000F121B /* XSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21349E1F96E1F0000F121B /* XSignal.m */; };
 		BC2134A21F96E384000F121B /* XSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A11F96E384000F121B /* XSubscriber.m */; };
-		BC2134A61F96F9AA000F121B /* UIButton+XSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A51F96F9AA000F121B /* UIButton+XSignal.m */; };
+		BC2134A61F96F9AA000F121B /* UIButton+XSGSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A51F96F9AA000F121B /* UIButton+XSGSupport.m */; };
 		BC2134A91F9703CF000F121B /* XSignal+XOperators.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A81F9703CF000F121B /* XSignal+XOperators.m */; };
 		BCCE8E9A23EE8212006F81B8 /* XSGMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE8E9923EE8212006F81B8 /* XSGMap.m */; };
 		BCCE8E9D23EEB666006F81B8 /* XSGFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE8E9C23EEB666006F81B8 /* XSGFilter.m */; };
 		BCCE8EA023EEB932006F81B8 /* XSGFlatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE8E9F23EEB932006F81B8 /* XSGFlatMap.m */; };
+		BCCE8EA323EED91E006F81B8 /* SwiftAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCE8EA223EED91E006F81B8 /* SwiftAPITest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +39,8 @@
 		BC2134A01F96E384000F121B /* XSubscriber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSubscriber.h; sourceTree = "<group>"; };
 		BC2134A11F96E384000F121B /* XSubscriber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSubscriber.m; sourceTree = "<group>"; };
 		BC2134A31F96F33A000F121B /* IntroToReactive.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = IntroToReactive.md; sourceTree = "<group>"; };
-		BC2134A41F96F9AA000F121B /* UIButton+XSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+XSignal.h"; sourceTree = "<group>"; };
-		BC2134A51F96F9AA000F121B /* UIButton+XSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XSignal.m"; sourceTree = "<group>"; };
+		BC2134A41F96F9AA000F121B /* UIButton+XSGSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+XSGSupport.h"; sourceTree = "<group>"; };
+		BC2134A51F96F9AA000F121B /* UIButton+XSGSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XSGSupport.m"; sourceTree = "<group>"; };
 		BC2134A71F9703CF000F121B /* XSignal+XOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XSignal+XOperators.h"; sourceTree = "<group>"; };
 		BC2134A81F9703CF000F121B /* XSignal+XOperators.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XSignal+XOperators.m"; sourceTree = "<group>"; };
 		BCCE8E9823EE8212006F81B8 /* XSGMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSGMap.h; sourceTree = "<group>"; };
@@ -48,6 +49,8 @@
 		BCCE8E9C23EEB666006F81B8 /* XSGFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSGFilter.m; sourceTree = "<group>"; };
 		BCCE8E9E23EEB932006F81B8 /* XSGFlatMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSGFlatMap.h; sourceTree = "<group>"; };
 		BCCE8E9F23EEB932006F81B8 /* XSGFlatMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSGFlatMap.m; sourceTree = "<group>"; };
+		BCCE8EA123EED91E006F81B8 /* TestMySignal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestMySignal-Bridging-Header.h"; sourceTree = "<group>"; };
+		BCCE8EA223EED91E006F81B8 /* SwiftAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAPITest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				BC2134921F96E1D8000F121B /* LaunchScreen.storyboard */,
 				BC2134951F96E1D8000F121B /* Info.plist */,
 				BC2134961F96E1D8000F121B /* main.m */,
+				BCCE8EA123EED91E006F81B8 /* TestMySignal-Bridging-Header.h */,
+				BCCE8EA223EED91E006F81B8 /* SwiftAPITest.swift */,
 			);
 			path = TestMySignal;
 			sourceTree = "<group>";
@@ -108,8 +113,8 @@
 				BCCE8E9F23EEB932006F81B8 /* XSGFlatMap.m */,
 				BC2134A71F9703CF000F121B /* XSignal+XOperators.h */,
 				BC2134A81F9703CF000F121B /* XSignal+XOperators.m */,
-				BC2134A41F96F9AA000F121B /* UIButton+XSignal.h */,
-				BC2134A51F96F9AA000F121B /* UIButton+XSignal.m */,
+				BC2134A41F96F9AA000F121B /* UIButton+XSGSupport.h */,
+				BC2134A51F96F9AA000F121B /* UIButton+XSGSupport.m */,
 				BC2134A01F96E384000F121B /* XSubscriber.h */,
 				BC2134A11F96E384000F121B /* XSubscriber.m */,
 			);
@@ -147,6 +152,7 @@
 				TargetAttributes = {
 					BC2134831F96E1D8000F121B = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -189,11 +195,12 @@
 			files = (
 				BCCE8EA023EEB932006F81B8 /* XSGFlatMap.m in Sources */,
 				BC21348C1F96E1D8000F121B /* ViewController.m in Sources */,
+				BCCE8EA323EED91E006F81B8 /* SwiftAPITest.swift in Sources */,
 				BC2134971F96E1D8000F121B /* main.m in Sources */,
 				BC21349F1F96E1F0000F121B /* XSignal.m in Sources */,
 				BCCE8E9A23EE8212006F81B8 /* XSGMap.m in Sources */,
 				BC2134891F96E1D8000F121B /* AppDelegate.m in Sources */,
-				BC2134A61F96F9AA000F121B /* UIButton+XSignal.m in Sources */,
+				BC2134A61F96F9AA000F121B /* UIButton+XSGSupport.m in Sources */,
 				BC2134A91F9703CF000F121B /* XSignal+XOperators.m in Sources */,
 				BCCE8E9D23EEB666006F81B8 /* XSGFilter.m in Sources */,
 				BC2134A21F96E384000F121B /* XSubscriber.m in Sources */,
@@ -330,12 +337,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PB8M4Z5P78;
 				INFOPLIST_FILE = TestMySignal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brook.TestMySignal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/TestMySignal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -344,12 +355,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PB8M4Z5P78;
 				INFOPLIST_FILE = TestMySignal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brook.TestMySignal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/TestMySignal-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

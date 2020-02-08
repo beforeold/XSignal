@@ -12,19 +12,19 @@
 
 - (instancetype)initWithUpstream:(XSignal *)upstream tranform:(XSignal * _Nonnull (^)(id _Nonnull))f {
     return [super initWithGenerator:^XDisposable _Nullable(XSubscriber * _Nonnull subscriber) {
-        return [upstream subscribeWithNextHandler:^(id next) {
+        return [upstream subscribeWithValueHandler:^(id next) {
             XSignal *innerSignal = f(next);
-            /* XDisposable cancellable = */ [innerSignal subscribeWithNextHandler:^(id innerNext) {
-                [subscriber receiveNext:innerNext];
-            } completionHandler:^(NSError * _Nullable error) {
-                if (error) {
-                    [subscriber receiveCompletionWithError:error];
+            /* XDisposable cancellable = */ [innerSignal subscribeWithValueHandler:^(id innerNext) {
+                [subscriber receiveValue:innerNext];
+            } completionHandler:^(XSGCompletion *completion) {
+                if (completion.error) {
+                    [subscriber receiveCompletion:completion];
                 } else {
                     // won't complete the subscription when inner signal complete without error
                 }
             }];
-        } completionHandler:^(NSError * _Nullable error) {
-            [subscriber receiveCompletionWithError:error];
+        } completionHandler:^(XSGCompletion *completion) {
+            [subscriber receiveCompletion:completion];
         }];
     }];
 }

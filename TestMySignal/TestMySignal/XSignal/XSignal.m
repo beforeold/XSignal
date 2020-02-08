@@ -57,17 +57,17 @@
     return [[self alloc] initWithGenerator:generator];
 }
 
-- (XDisposable)subscribeWithNextHandler:(void(^_Nullable)(id))nextHandler {
-    return [self subscribeWithNextHandler:nextHandler completionHandler:nil];
+- (XDisposable)subscribeWithValueHandler:(void(^_Nullable)(id))valueHandler {
+    return [self subscribeWithValueHandler:valueHandler completionHandler:nil];
 }
 
-- (XDisposable)subscribeWithCompletionHandler:(void (^)(NSError * _Nullable))comletionHandler {
-    return [self subscribeWithNextHandler:nil completionHandler:comletionHandler];
+- (XDisposable)subscribeWithCompletionHandler:(void (^)(XSGCompletion *))comletionHandler {
+    return [self subscribeWithValueHandler:nil completionHandler:comletionHandler];
 }
 
-- (XDisposable)subscribeWithNextHandler:(void (^_Nullable)(id))nextHandler completionHandler:(void (^_Nullable)(NSError *_Nullable))comletionHandler
+- (XDisposable)subscribeWithValueHandler:(void (^_Nullable)(id))valueHandler completionHandler:(void (^_Nullable)(XSGCompletion *))comletionHandler
 {
-    XSubscriber *sub = [[XSubscriber alloc] initWithNextHandler:nextHandler completionHandler:comletionHandler];
+    XSubscriber *sub = [[XSubscriber alloc] initWithValueHandler:valueHandler completionHandler:comletionHandler];
     XDisposable subbedDisposable = _generator(sub);
     
     return [[XSubscriberDisposable alloc] initWithSubscriber:sub disposable:subbedDisposable];

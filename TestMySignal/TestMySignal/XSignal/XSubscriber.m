@@ -8,10 +8,37 @@
 
 #import "XSubscriber.h"
 
+@interface XSGCompletion ()
+
+@property (nullable, nonatomic, readwrite) NSError *error;
+
+@end
+
+@implementation XSGCompletion
+
++ (XSGCompletion *)finished {
+    static id shared;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[self alloc] init];
+    });
+    return shared;
+}
+
++ (XSGCompletion * _Nonnull (^)(NSError * _Nonnull))failure {
+    return ^XSGCompletion *(NSError *error){
+        XSGCompletion *completion = [[XSGCompletion alloc] init];
+        completion.error = error;
+        return completion;
+    };
+}
+
+@end
+
 @interface XSubscriber ()
 
-@property (nonatomic, copy, readonly) void(^_Nullable nextHandler)(id);
-@property (nonatomic, copy, readonly) void(^_Nullable completionHandler)(NSError *_Nullable);
+@property (nonatomic, copy, readonly) void(^_Nullable valueHandler)(id);
+@property (nonatomic, copy, readonly) void(^_Nullable completionHandler)(XSGCompletion *);
 
 @property BOOL terminated;
 
@@ -19,28 +46,28 @@
 
 @implementation XSubscriber
 
-- (instancetype)initWithNextHandler:(void (^_Nullable)(id))nextHandler
-                  completionHandler:(void (^_Nullable)(NSError *_Nullable))completionHandler
+- (instancetype)initWithValueHandler:(void (^_Nullable)(id))valueHandler
+                  completionHandler:(void (^_Nullable)(XSGCompletion *))completionHandler
 {
     self = [super init];
     if (self) {
-        _nextHandler = [nextHandler copy];
+        _valueHandler = [valueHandler copy];
         _completionHandler = [completionHandler copy];
     }
     
     return self;
 }
 
-- (void)receiveNext:(id)next {
+- (void)receiveValue:(id)value {
     if (self.terminated) return;
     
-    !self.nextHandler ?: self.nextHandler(next);
+    !self.valueHandler ?: self.valueHandler(value);
 }
 
-- (void)receiveCompletionWithError:(NSError *_Nullable)error {
+- (void)receiveCompletion:(XSGCompletion *)completion {
     if (self.terminated) return;
     
-    !self.completionHandler ?: self.completionHandler(error);
+    !self.completionHandler ?: self.completionHandler(completion);
     self.terminated = YES;
 }
 

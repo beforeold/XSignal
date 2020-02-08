@@ -1,5 +1,5 @@
 //
-//  UIButton+XSignal.h
+//  UIButton+XSGSupport.h
 //  TestMySignal
 //
 //  Created by Brook on 2017/10/18.
@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "XSignal.h"
 
-@interface UIButton (XSignal)
+@interface UIButton (XSGSupport)
 
-@property (nonatomic, strong, readonly) XSignal *x_signal;
+@property (nonatomic, strong, readonly) XSignal *xsg_signal;
 
 @end

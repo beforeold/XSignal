@@ -40,7 +40,7 @@ typedef ... Subscriber
 ```Objective-C
 @interface XSubscriber : NSObject
 
-- (instancetype)initWithNextHandler:(void(^)(id))nextHandler
+- (instancetype)initWithvalueHandler:(void(^)(id))valueHandler
 errorHandler:(void(^)(id))errorHandler
 completionHandler:(void(^)(void))completionHandler;
 
@@ -51,7 +51,7 @@ completionHandler:(void(^)(void))completionHandler;
 ```Objective-C
 @interface XSubscriber ()
 
-@property (nonatomic, copy, readonly) void(^nextHandler)(id);
+@property (nonatomic, copy, readonly) void(^valueHandler)(id);
 @property (nonatomic, copy, readonly) void(^errorHandler)(id);
 @property (nonatomic, copy, readonly) void(^completionHandler)(void);
 
@@ -60,13 +60,13 @@ completionHandler:(void(^)(void))completionHandler;
 @end
 
 @implementation XSubscriber
-- (instancetype)initWithNextHandler:(void (^)(id))nextHandler
+- (instancetype)initWithvalueHandler:(void (^)(id))valueHandler
                         errorHandler:(void (^)(id))errorHandler
                    completionHandler:(void (^)(void))completionHandler
 {
     self = [super init];
     if (self) {
-        _nextHandler = [nextHandler copy];
+        _valueHandler = [valueHandler copy];
         _errorHandler = [errorHandler copy];
         _completionHandler = [completionHandler copy];
     }
@@ -88,7 +88,7 @@ completionHandler:(void(^)(void))completionHandler;
 - (void)gotNext:(id)next {
     if (self.terminated) return;
 
-    !self.nextHandler ?: self.nextHandler(next);
+    !self.valueHandler ?: self.valueHandler(next);
 }
 
 - (void)gotError:(id)error {
@@ -109,16 +109,16 @@ completionHandler:(void(^)(void))completionHandler;
 为信号新增一个订阅者，订阅时即启用信号产生器。
 
 ```Objective-C
-- (XDisposable)subscribeWithNextHandler:(void(^)(id))nextHandler
+- (XDisposable)subscribeWithvalueHandler:(void(^)(id))valueHandler
             errorHandler:(void(^)(id))errorHandler
             completionHandler:(void(^)(void))comletionHandler;
             
 /// 实现
-- (XDisposable)subscribeWithNextHandler:(void (^)(id))nextHandler
+- (XDisposable)subscribeWithvalueHandler:(void (^)(id))valueHandler
         errorHandler:(void (^)(id))errorHandler
             completionHandler:(void (^)(void))comletionHandler
 {
-    XSubscriber *sub = [[XSubscriber alloc] initWithNextHandler:nextHandler
+    XSubscriber *sub = [[XSubscriber alloc] initWithvalueHandler:valueHandler
                                             errorHandler:errorHandler
                                             completionHandler:comletionHandler];
     XDisposable subbedDisposable = _generator(sub); // 启用产生器

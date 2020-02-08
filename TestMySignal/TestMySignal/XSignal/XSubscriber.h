@@ -10,13 +10,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+@interface XSGCompletion : NSObject
+
+@property (class, nonatomic, readonly) XSGCompletion *finished;
+@property (class, nonatomic, readonly) XSGCompletion *(^failure)(NSError *);
+
+@property (nullable, nonatomic, readonly) NSError *error;
+
+@end
+
 @interface XSubscriber : NSObject
 
-- (instancetype)initWithNextHandler:(void(^_Nullable)(id))nextHandler
-                  completionHandler:(void(^_Nullable)(NSError *_Nullable))completionHandler;
+- (instancetype)initWithValueHandler:(void(^_Nullable)(id))valueHandler
+                  completionHandler:(void(^_Nullable)(XSGCompletion *))completionHandler;
 
-- (void)receiveNext:(id)next;
-- (void)receiveCompletionWithError:(NSError *_Nullable)error;
+- (void)receiveValue:(id)value NS_SWIFT_NAME(receive(_:));
+- (void)receiveCompletion:(XSGCompletion *)completion NS_SWIFT_NAME(receive(completion:));
 
 @end
 

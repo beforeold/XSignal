@@ -1,12 +1,12 @@
 //
-//  UIButton+XSignal.m
+//  UIButton+XSGSupport.m
 //  TestMySignal
 //
 //  Created by Brook on 2017/10/18.
 //  Copyright © 2017年 Brook. All rights reserved.
 //
 
-#import "UIButton+XSignal.h"
+#import "UIButton+XSGSupport.h"
 #import <objc/runtime.h>
 #import "XSignal.h"
 #import "XSubscriber.h"
@@ -22,13 +22,13 @@
 @implementation XButtonTargetAction
 
 - (void)onClick:(id)sender {
-    [self.subscriber receiveNext:sender];
+    [self.subscriber receiveValue:sender];
 }
 
 @end
 
-@implementation UIButton (XSignal)
-- (XSignal *)x_signal {
+@implementation UIButton (XSGSupport)
+- (XSignal *)xsg_signal {
     XSignal *signal = objc_getAssociatedObject(self, _cmd);
     if (!signal) {
         signal = [self x_createSignal];

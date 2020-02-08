@@ -12,10 +12,10 @@
 
 - (instancetype)initWithUpstream:(XSignal *)signal transform:(nonnull id  _Nonnull (^)(id _Nonnull))f {
     self = [super initWithGenerator:^XDisposable _Nullable(XSubscriber * _Nonnull subscriber) {
-        return [signal subscribeWithNextHandler:^(id x) {
-            [subscriber receiveNext:f(x)];
-        } completionHandler:^(NSError * _Nullable error) {
-            [subscriber receiveCompletionWithError:error];
+        return [signal subscribeWithValueHandler:^(id x) {
+            [subscriber receiveValue:f(x)];
+        } completionHandler:^(XSGCompletion *completion) {
+            [subscriber receiveCompletion:completion];
         }];
     }];
     

@@ -22,11 +22,11 @@ typedef XDisposable _Nullable (^XGenerator)(XSubscriber *subscriber);
 
 + (instancetype)signalWithGenerator:(XGenerator)generator;
 
-- (XDisposable)subscribeWithNextHandler:(void(^_Nullable)(id))nextHandler;
+- (XDisposable)subscribeWithValueHandler:(void(^_Nullable)(id))valueHandler;
 
-- (XDisposable)subscribeWithCompletionHandler:(void(^_Nullable)(NSError *_Nullable error))comletionHandler;
+- (XDisposable)subscribeWithCompletionHandler:(void(^_Nullable)(XSGCompletion *))comletionHandler;
 
-- (XDisposable)subscribeWithNextHandler:(void(^_Nullable)(id))nextHandler completionHandler:(void(^_Nullable)(NSError *_Nullable error))comletionHandler;
+- (XDisposable)subscribeWithValueHandler:(void(^_Nullable)(id))valueHandler completionHandler:(void(^_Nullable)(XSGCompletion *))comletionHandler;
 
 @end
 
