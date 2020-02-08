@@ -9,34 +9,21 @@
 #import "XSignal+XOperators.h"
 #import "XSubscriber.h"
 #import "XSGMap.h"
+#import "XSGFilter.h"
+#import "XSGFlatMap.h"
 
 @implementation XSignal (XOperators)
 
-- (XSignal *)map:(id (^)(id _Nullable))f {
-    return [[XSGMap alloc] initWithSignal:self transform:f];
+- (XSignal *)map:(id (^)(id))f {
+    return [[XSGMap alloc] initWithUpstream:self transform:f];
 }
 
-
-- (XSignal *)filter:(BOOL (^)(id _Nullable))f {
-    return [[XSignal alloc] initWithGenerator:^XDisposable(XSubscriber *subscriber) {
-        return [self subscribeWithNextHandler:^(id _Nullable next){ if(f(next)) [subscriber receiveNext:next];}
-                            completionHandler:^(NSError *_Nullable error){ [subscriber receiveCompletionWithError:error]; }];
-    }];
+- (XSignal *)filter:(BOOL (^)(id))f {
+    return [[XSGFilter alloc] initWithUpstream:self filter:f];
 }
 
-- (XSignal *)flatMap:(XSignal * _Nonnull (^)(id _Nullable))f {
-    return [XSignal signalWithGenerator:^XDisposable _Nullable(XSubscriber * _Nonnull subscriber) {
-        return [self subscribeWithNextHandler:^(id _Nullable next) {
-            XSignal *innerSignal = f(next);
-            [innerSignal subscribeWithNextHandler:^(id _Nullable innerNext) {
-                [subscriber receiveNext:innerNext];
-            } completionHandler:^(NSError * _Nullable error) {
-                [subscriber receiveCompletionWithError:error];
-            }];
-        } completionHandler:^(NSError * _Nullable error) {
-            [subscriber receiveCompletionWithError:error];
-        }];
-    }];
+- (XSignal *)flatMap:(XSignal *(^)(id))f {
+    return [[XSGFlatMap alloc] initWithUpstream:self tranform:f];
 }
 
 @end

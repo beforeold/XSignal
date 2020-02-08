@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class XSubscriber;
 typedef id XDisposable;
 
-typedef XDisposable _Nullable(^XGenerator)(XSubscriber *subscriber);
+typedef XDisposable _Nullable (^XGenerator)(XSubscriber *subscriber);
 
 @interface XSignal : NSObject
 
@@ -22,10 +22,11 @@ typedef XDisposable _Nullable(^XGenerator)(XSubscriber *subscriber);
 
 + (instancetype)signalWithGenerator:(XGenerator)generator;
 
-- (XDisposable)subscribeWithNextHandler:(void(^_Nullable)(id _Nullable))nextHandler;
+- (XDisposable)subscribeWithNextHandler:(void(^_Nullable)(id))nextHandler;
 
-- (XDisposable)subscribeWithNextHandler:(void(^_Nullable)(id _Nullable))nextHandler
-                      completionHandler:(void(^_Nullable)(NSError *_Nullable error))comletionHandler;
+- (XDisposable)subscribeWithCompletionHandler:(void(^_Nullable)(NSError *_Nullable error))comletionHandler;
+
+- (XDisposable)subscribeWithNextHandler:(void(^_Nullable)(id))nextHandler completionHandler:(void(^_Nullable)(NSError *_Nullable error))comletionHandler;
 
 @end
 

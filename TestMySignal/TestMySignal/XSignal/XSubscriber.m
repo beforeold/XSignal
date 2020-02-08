@@ -10,7 +10,7 @@
 
 @interface XSubscriber ()
 
-@property (nonatomic, copy, readonly) void(^_Nullable nextHandler)(id _Nullable);
+@property (nonatomic, copy, readonly) void(^_Nullable nextHandler)(id);
 @property (nonatomic, copy, readonly) void(^_Nullable completionHandler)(NSError *_Nullable);
 
 @property BOOL terminated;
@@ -19,7 +19,7 @@
 
 @implementation XSubscriber
 
-- (instancetype)initWithNextHandler:(void (^_Nullable)(id _Nullable))nextHandler
+- (instancetype)initWithNextHandler:(void (^_Nullable)(id))nextHandler
                   completionHandler:(void (^_Nullable)(NSError *_Nullable))completionHandler
 {
     self = [super init];

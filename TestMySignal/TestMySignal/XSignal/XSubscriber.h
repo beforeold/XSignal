@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XSubscriber : NSObject
 
-- (instancetype)initWithNextHandler:(void(^_Nullable)(id _Nullable))nextHandler
+- (instancetype)initWithNextHandler:(void(^_Nullable)(id))nextHandler
                   completionHandler:(void(^_Nullable)(NSError *_Nullable))completionHandler;
 
-- (void)receiveNext:(id _Nullable)next;
+- (void)receiveNext:(id)next;
 - (void)receiveCompletionWithError:(NSError *_Nullable)error;
 
 @end

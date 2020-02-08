@@ -12,11 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XSignal (XOperators)
 
-- (XSignal *)map:(id(^)(id _Nullable))f;
+- (XSignal *)map:(id(^)(id))f;
 
-- (XSignal *)filter:(BOOL(^)(id _Nullable))f;
+- (XSignal *)filter:(BOOL(^)(id))f;
 
-- (XSignal *)flatMap:(XSignal *(^)(id _Nullable))f;
+- (XSignal *)flatMap:(XSignal *(^)(id))f;
 
 @end
 

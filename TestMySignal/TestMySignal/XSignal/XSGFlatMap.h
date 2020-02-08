@@ -1,5 +1,5 @@
 //
-//  XSGMap.h
+//  XSGFlatMap.h
 //  TestMySignal
 //
 //  Created by brook.dinglan on 2020/2/8.
@@ -10,9 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XSGMap : XSignal
+@interface XSGFlatMap : XSignal
 
-- (instancetype)initWithUpstream:(XSignal *)signal transform:(id(^)(id x))f;
+- (instancetype)initWithUpstream:(XSignal *)upstream tranform:(XSignal *(^)(id))f;
 
 @end
 
