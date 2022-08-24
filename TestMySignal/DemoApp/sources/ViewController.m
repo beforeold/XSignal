@@ -2,7 +2,7 @@
 //  ViewController.m
 //  TestMySignal
 //
-//  Created by Brook on 2017/10/18.
+//  Created by beforeold on 2017/10/18.
 //  Copyright © 2017年 Brook. All rights reserved.
 //
 
@@ -55,7 +55,7 @@
 }
 
 - (XSGGenerator *)plusOneSignal {
-    return [XSGGenerator signalWithGenerator:^XSGDisposable _Nullable(XSGSubscriber * _Nonnull subscriber) {
+    return [XSGGenerator generatorWithEmitter:^XSGDisposable _Nullable(XSGSubscriber * _Nonnull subscriber) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [subscriber receiveValue:@(self.counter++)];
             [subscriber receiveCompletion:XSGCompletion.finished];

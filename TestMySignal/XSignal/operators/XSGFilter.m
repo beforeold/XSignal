@@ -2,7 +2,7 @@
 //  XSGFilter.m
 //  TestMySignal
 //
-//  Created by brook.dinglan on 2020/2/8.
+//  Created by beforeold on 2020/2/8.
 //  Copyright © 2020 Brook. All rights reserved.
 //
 
@@ -10,10 +10,12 @@
 
 @implementation XSGFilter
 
-- (instancetype)initWithUpstream:(XSGGenerator *)signal filter:(BOOL(^)(id))f {
-    self = [super initWithGenerator:^XSGDisposable _Nullable(XSGSubscriber * _Nonnull subscriber) {
-        return [signal subscribeWithValueHandler:^(id x) {
-            if (f(x)) [subscriber receiveValue:x];
+- (instancetype)initWithUpstream:(XSGGenerator *)upstream filter:(BOOL(^)(id))filter {
+    self = [super initWithEmitter:^XSGDisposable _Nullable(XSGSubscriber * _Nonnull subscriber) {
+        return [upstream subscribeWithValueHandler:^(id x) {
+            if (filter(x)) {
+                [subscriber receiveValue:x];
+            }
         } completionHandler:^(XSGCompletion *completion) {
             [subscriber receiveCompletion:completion];
         }];

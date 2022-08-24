@@ -2,7 +2,7 @@
 //  XSGFlatMap.h
 //  TestMySignal
 //
-//  Created by brook.dinglan on 2020/2/8.
+//  Created by beforeold on 2020/2/8.
 //  Copyright © 2020 Brook. All rights reserved.
 //
 

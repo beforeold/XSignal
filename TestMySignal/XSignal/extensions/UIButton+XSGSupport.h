@@ -2,7 +2,7 @@
 //  UIButton+XSGSupport.h
 //  TestMySignal
 //
-//  Created by Brook on 2017/10/18.
+//  Created by beforeold on 2017/10/18.
 //  Copyright © 2017年 Brook. All rights reserved.
 //
 

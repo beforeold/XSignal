@@ -2,7 +2,7 @@
 //  UIButton+XSGSupport.m
 //  TestMySignal
 //
-//  Created by Brook on 2017/10/18.
+//  Created by beforeold on 2017/10/18.
 //  Copyright © 2017年 Brook. All rights reserved.
 //
 
@@ -40,7 +40,7 @@
 
 - (XSGGenerator *)xsg_createSignal {
     __weak typeof(self) weakSelf = self;
-    XSGGenerator *signal = [[XSGGenerator alloc] initWithGenerator:^XSGDisposable(XSGSubscriber *subscriber) {
+    XSGGenerator *signal = [[XSGGenerator alloc] initWithEmitter:^XSGDisposable(XSGSubscriber *subscriber) {
         XSGButtonTargetAction *holder = [[XSGButtonTargetAction alloc] init];
         holder.subscriber = subscriber;
         [weakSelf addTarget:holder action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];

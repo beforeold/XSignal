@@ -2,7 +2,7 @@
 //  XSGFlatMap.m
 //  TestMySignal
 //
-//  Created by brook.dinglan on 2020/2/8.
+//  Created by beforeold on 2020/2/8.
 //  Copyright © 2020 Brook. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 @implementation XSGFlatMap
 
 - (instancetype)initWithUpstream:(XSGGenerator *)upstream tranform:(XSGGenerator * _Nonnull (^)(id _Nonnull))tranform {
-    return [super initWithGenerator:^XSGDisposable _Nullable(XSGSubscriber * _Nonnull subscriber) {
+    return [super initWithEmitter:^XSGDisposable _Nullable(XSGSubscriber * _Nonnull subscriber) {
         return [upstream subscribeWithValueHandler:^(id next) {
             XSGGenerator *innerSignal = tranform(next);
             /* XDisposable cancellable = */ [innerSignal subscribeWithValueHandler:^(id innerNext) {

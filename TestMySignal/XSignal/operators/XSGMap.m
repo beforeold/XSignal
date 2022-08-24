@@ -2,7 +2,7 @@
 //  XSGMap.m
 //  TestMySignal
 //
-//  Created by brook.dinglan on 2020/2/8.
+//  Created by beforeold on 2020/2/8.
 //  Copyright © 2020 Brook. All rights reserved.
 //
 
@@ -10,10 +10,10 @@
 
 @implementation XSGMap
 
-- (instancetype)initWithUpstream:(XSGGenerator *)signal transform:(nonnull id  _Nonnull (^)(id _Nonnull))f {
-    self = [super initWithGenerator:^XSGDisposable _Nullable(XSGSubscriber * _Nonnull subscriber) {
-        return [signal subscribeWithValueHandler:^(id x) {
-            [subscriber receiveValue:f(x)];
+- (instancetype)initWithUpstream:(XSGGenerator *)upstream transform:(nonnull id  _Nonnull (^)(id _Nonnull))transform {
+    self = [super initWithEmitter:^XSGDisposable _Nullable(XSGSubscriber * _Nonnull subscriber) {
+        return [upstream subscribeWithValueHandler:^(id x) {
+            [subscriber receiveValue:transform(x)];
         } completionHandler:^(XSGCompletion *completion) {
             [subscriber receiveCompletion:completion];
         }];

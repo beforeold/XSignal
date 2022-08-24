@@ -2,16 +2,16 @@
 //  SwiftAPITest.swift
 //  TestMySignal
 //
-//  Created by brook.dinglan on 2020/2/8.
+//  Created by beforeold on 2020/2/8.
 //  Copyright © 2020 Brook. All rights reserved.
 //
 
 import Foundation
 import Combine
 
-let signal = XSGGenerator { (sb) -> Any? in
-    sb.receive(5)
-    sb.receive(completion: .finished)
+let signal = XSGGenerator { (sub) -> Any? in
+    sub.receive(5)
+    sub.receive(completion: .finished)
     return nil
 }
 

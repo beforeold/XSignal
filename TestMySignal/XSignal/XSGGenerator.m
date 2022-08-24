@@ -2,7 +2,7 @@
 //  XSGGenerator.m
 //  TestMySignal
 //
-//  Created by Brook on 2017/10/18.
+//  Created by beforeold on 2017/10/18.
 //  Copyright © 2017年 Brook. All rights reserved.
 //
 
@@ -39,22 +39,22 @@
 
 @interface XSGGenerator ()
 
-@property (nonatomic, copy, readonly) XSGEmitter generator;
+@property (nonatomic, copy, readonly) XSGEmitter emitter;
 
 @end
 
 @implementation XSGGenerator
-- (instancetype)initWithGenerator:(XSGEmitter)generator {
+- (instancetype)initWithEmitter:(XSGEmitter)emitter {
     self = [super init];
     if (self) {
-        _generator = [generator copy];
+        _emitter = [emitter copy];
     }
     
     return self;
 }
 
-+ (instancetype)signalWithGenerator:(XSGEmitter)generator {
-    return [[self alloc] initWithGenerator:generator];
++ (instancetype)generatorWithEmitter:(XSGEmitter)emitter {
+    return [[self alloc] initWithEmitter:emitter];
 }
 
 - (XSGDisposable)subscribeWithValueHandler:(void(^_Nullable)(id))valueHandler {
@@ -68,7 +68,7 @@
 - (XSGDisposable)subscribeWithValueHandler:(void (^_Nullable)(id))valueHandler completionHandler:(void (^_Nullable)(XSGCompletion *))comletionHandler
 {
     XSGSubscriber *sub = [[XSGSubscriber alloc] initWithValueHandler:valueHandler completionHandler:comletionHandler];
-    XSGDisposable subbedDisposable = _generator(sub);
+    XSGDisposable subbedDisposable = _emitter(sub);
     
     return [[XSubscriberDisposable alloc] initWithSubscriber:sub disposable:subbedDisposable];
 }

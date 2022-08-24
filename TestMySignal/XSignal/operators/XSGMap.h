@@ -2,7 +2,7 @@
 //  XSGMap.h
 //  TestMySignal
 //
-//  Created by brook.dinglan on 2020/2/8.
+//  Created by beforeold on 2020/2/8.
 //  Copyright © 2020 Brook. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XSGMap : XSGGenerator
 
-- (instancetype)initWithUpstream:(XSGGenerator *)signal transform:(id(^)(id x))f;
+- (instancetype)initWithUpstream:(XSGGenerator *)upstream transform:(id(^)(id x))transform;
 
 @end
 

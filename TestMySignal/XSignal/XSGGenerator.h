@@ -2,7 +2,7 @@
 //  XSGGenerator.h
 //  TestMySignal
 //
-//  Created by Brook on 2017/10/18.
+//  Created by beforeold on 2017/10/18.
 //  Copyright © 2017年 Brook. All rights reserved.
 //
 
@@ -18,15 +18,16 @@ typedef XSGDisposable _Nullable (^XSGEmitter)(XSGSubscriber *subscriber);
 
 @interface XSGGenerator : NSObject
 
-- (instancetype)initWithGenerator:(XSGEmitter)generator;
+- (instancetype)initWithEmitter:(XSGEmitter)emitter;
 
-+ (instancetype)signalWithGenerator:(XSGEmitter)generator;
++ (instancetype)generatorWithEmitter:(XSGEmitter)emitter;
 
 - (XSGDisposable)subscribeWithValueHandler:(void(^_Nullable)(id))valueHandler;
 
 - (XSGDisposable)subscribeWithCompletionHandler:(void(^_Nullable)(XSGCompletion *))comletionHandler;
 
-- (XSGDisposable)subscribeWithValueHandler:(void(^_Nullable)(id))valueHandler completionHandler:(void(^_Nullable)(XSGCompletion *))comletionHandler;
+- (XSGDisposable)subscribeWithValueHandler:(void(^_Nullable)(id))valueHandler
+                         completionHandler:(void(^_Nullable)(XSGCompletion *))comletionHandler;
 
 @end
 
