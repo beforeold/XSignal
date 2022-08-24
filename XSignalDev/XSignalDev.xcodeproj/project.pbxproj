@@ -39,7 +39,7 @@
 		94B9245A28B697610026F6F5 /* UIButton+XSGSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XSGSupport.m"; sourceTree = "<group>"; };
 		94B9245B28B697610026F6F5 /* XSGGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSGGenerator.m; sourceTree = "<group>"; };
 		94B9245C28B697610026F6F5 /* XSGSubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSGSubscriber.h; sourceTree = "<group>"; };
-		BC2134841F96E1D8000F121B /* TestMySignal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMySignal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2134841F96E1D8000F121B /* XSignalDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XSignalDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2134871F96E1D8000F121B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC2134881F96E1D8000F121B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BC21348A1F96E1D8000F121B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 		BC2134931F96E1D8000F121B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC2134951F96E1D8000F121B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC2134961F96E1D8000F121B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BCCE8EA123EED91E006F81B8 /* TestMySignal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestMySignal-Bridging-Header.h"; sourceTree = "<group>"; };
+		BCCE8EA123EED91E006F81B8 /* XSignal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XSignal-Bridging-Header.h"; sourceTree = "<group>"; };
 		BCCE8EA223EED91E006F81B8 /* SwiftAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAPITest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,7 +131,7 @@
 				BC2134881F96E1D8000F121B /* AppDelegate.m */,
 				BC21348A1F96E1D8000F121B /* ViewController.h */,
 				BC21348B1F96E1D8000F121B /* ViewController.m */,
-				BCCE8EA123EED91E006F81B8 /* TestMySignal-Bridging-Header.h */,
+				BCCE8EA123EED91E006F81B8 /* XSignal-Bridging-Header.h */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				94B9244A28B697610026F6F5 /* XSignal */,
-				BC2134861F96E1D8000F121B /* TestMySignal */,
+				BC2134861F96E1D8000F121B /* XSignalDev */,
 				BC2134851F96E1D8000F121B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,26 +148,26 @@
 		BC2134851F96E1D8000F121B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC2134841F96E1D8000F121B /* TestMySignal.app */,
+				BC2134841F96E1D8000F121B /* XSignalDev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC2134861F96E1D8000F121B /* TestMySignal */ = {
+		BC2134861F96E1D8000F121B /* XSignalDev */ = {
 			isa = PBXGroup;
 			children = (
 				94C0123328B685D4005D1EA8 /* sources */,
 				94C0123228B685C7005D1EA8 /* resources */,
 			);
-			path = TestMySignal;
+			path = XSignalDev;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BC2134831F96E1D8000F121B /* TestMySignal */ = {
+		BC2134831F96E1D8000F121B /* XSignalDev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC21349A1F96E1D8000F121B /* Build configuration list for PBXNativeTarget "TestMySignal" */;
+			buildConfigurationList = BC21349A1F96E1D8000F121B /* Build configuration list for PBXNativeTarget "XSignalDev" */;
 			buildPhases = (
 				BC2134801F96E1D8000F121B /* Sources */,
 				BC2134811F96E1D8000F121B /* Frameworks */,
@@ -177,9 +177,9 @@
 			);
 			dependencies = (
 			);
-			name = TestMySignal;
+			name = XSignalDev;
 			productName = TestMySignal;
-			productReference = BC2134841F96E1D8000F121B /* TestMySignal.app */;
+			productReference = BC2134841F96E1D8000F121B /* XSignalDev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BC21347F1F96E1D8000F121B /* Build configuration list for PBXProject "TestMySignal" */;
+			buildConfigurationList = BC21347F1F96E1D8000F121B /* Build configuration list for PBXProject "XSignalDev" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -212,7 +212,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BC2134831F96E1D8000F121B /* TestMySignal */,
+				BC2134831F96E1D8000F121B /* XSignalDev */,
 			);
 		};
 /* End PBXProject section */
@@ -389,11 +389,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PB8M4Z5P78;
-				INFOPLIST_FILE = TestMySignal/resources/Info.plist;
+				INFOPLIST_FILE = XSignalDev/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brook.TestMySignal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/sources/TestMySignal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "XSignalDev/sources/XSignal-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -407,11 +407,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PB8M4Z5P78;
-				INFOPLIST_FILE = TestMySignal/resources/Info.plist;
+				INFOPLIST_FILE = XSignalDev/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brook.TestMySignal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/sources/TestMySignal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "XSignalDev/sources/XSignal-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -420,7 +420,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC21347F1F96E1D8000F121B /* Build configuration list for PBXProject "TestMySignal" */ = {
+		BC21347F1F96E1D8000F121B /* Build configuration list for PBXProject "XSignalDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC2134981F96E1D8000F121B /* Debug */,
@@ -429,7 +429,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC21349A1F96E1D8000F121B /* Build configuration list for PBXNativeTarget "TestMySignal" */ = {
+		BC21349A1F96E1D8000F121B /* Build configuration list for PBXNativeTarget "XSignalDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC21349B1F96E1D8000F121B /* Debug */,
