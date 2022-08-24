@@ -7,23 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94B9245D28B697610026F6F5 /* XSGGenerator+XSGOperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B9244E28B697610026F6F5 /* XSGGenerator+XSGOperators.m */; };
+		94B9245E28B697610026F6F5 /* XSGFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B9245028B697610026F6F5 /* XSGFilter.m */; };
+		94B9245F28B697610026F6F5 /* XSGMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B9245128B697610026F6F5 /* XSGMap.m */; };
+		94B9246028B697610026F6F5 /* XSGFlatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B9245328B697610026F6F5 /* XSGFlatMap.m */; };
+		94B9246128B697610026F6F5 /* XSGSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B9245628B697610026F6F5 /* XSGSubscriber.m */; };
+		94B9246228B697610026F6F5 /* UIButton+XSGSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B9245A28B697610026F6F5 /* UIButton+XSGSupport.m */; };
+		94B9246328B697610026F6F5 /* XSGGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B9245B28B697610026F6F5 /* XSGGenerator.m */; };
 		BC2134891F96E1D8000F121B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134881F96E1D8000F121B /* AppDelegate.m */; };
 		BC21348C1F96E1D8000F121B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21348B1F96E1D8000F121B /* ViewController.m */; };
 		BC21348F1F96E1D8000F121B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC21348D1F96E1D8000F121B /* Main.storyboard */; };
 		BC2134911F96E1D8000F121B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2134901F96E1D8000F121B /* Assets.xcassets */; };
 		BC2134941F96E1D8000F121B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2134921F96E1D8000F121B /* LaunchScreen.storyboard */; };
 		BC2134971F96E1D8000F121B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134961F96E1D8000F121B /* main.m */; };
-		BC21349F1F96E1F0000F121B /* XSGGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21349E1F96E1F0000F121B /* XSGGenerator.m */; };
-		BC2134A21F96E384000F121B /* XSGSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A11F96E384000F121B /* XSGSubscriber.m */; };
-		BC2134A61F96F9AA000F121B /* UIButton+XSGSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A51F96F9AA000F121B /* UIButton+XSGSupport.m */; };
-		BC2134A91F9703CF000F121B /* XSGGenerator+XSGOperators.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A81F9703CF000F121B /* XSGGenerator+XSGOperators.m */; };
-		BCCE8E9A23EE8212006F81B8 /* XSGMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE8E9923EE8212006F81B8 /* XSGMap.m */; };
-		BCCE8E9D23EEB666006F81B8 /* XSGFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE8E9C23EEB666006F81B8 /* XSGFilter.m */; };
-		BCCE8EA023EEB932006F81B8 /* XSGFlatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE8E9F23EEB932006F81B8 /* XSGFlatMap.m */; };
 		BCCE8EA323EED91E006F81B8 /* SwiftAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCE8EA223EED91E006F81B8 /* SwiftAPITest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94B9244B28B697610026F6F5 /* XSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSignal.h; sourceTree = "<group>"; };
+		94B9244E28B697610026F6F5 /* XSGGenerator+XSGOperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XSGGenerator+XSGOperators.m"; sourceTree = "<group>"; };
+		94B9244F28B697610026F6F5 /* XSGFlatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSGFlatMap.h; sourceTree = "<group>"; };
+		94B9245028B697610026F6F5 /* XSGFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSGFilter.m; sourceTree = "<group>"; };
+		94B9245128B697610026F6F5 /* XSGMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSGMap.m; sourceTree = "<group>"; };
+		94B9245228B697610026F6F5 /* XSGGenerator+XSGOperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XSGGenerator+XSGOperators.h"; sourceTree = "<group>"; };
+		94B9245328B697610026F6F5 /* XSGFlatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSGFlatMap.m; sourceTree = "<group>"; };
+		94B9245428B697610026F6F5 /* XSGFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSGFilter.h; sourceTree = "<group>"; };
+		94B9245528B697610026F6F5 /* XSGMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSGMap.h; sourceTree = "<group>"; };
+		94B9245628B697610026F6F5 /* XSGSubscriber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSGSubscriber.m; sourceTree = "<group>"; };
+		94B9245728B697610026F6F5 /* XSGGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSGGenerator.h; sourceTree = "<group>"; };
+		94B9245928B697610026F6F5 /* UIButton+XSGSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XSGSupport.h"; sourceTree = "<group>"; };
+		94B9245A28B697610026F6F5 /* UIButton+XSGSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XSGSupport.m"; sourceTree = "<group>"; };
+		94B9245B28B697610026F6F5 /* XSGGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSGGenerator.m; sourceTree = "<group>"; };
+		94B9245C28B697610026F6F5 /* XSGSubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSGSubscriber.h; sourceTree = "<group>"; };
 		BC2134841F96E1D8000F121B /* TestMySignal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMySignal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2134871F96E1D8000F121B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC2134881F96E1D8000F121B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,20 +49,6 @@
 		BC2134931F96E1D8000F121B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC2134951F96E1D8000F121B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC2134961F96E1D8000F121B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BC21349D1F96E1F0000F121B /* XSGGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSGGenerator.h; sourceTree = "<group>"; };
-		BC21349E1F96E1F0000F121B /* XSGGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSGGenerator.m; sourceTree = "<group>"; };
-		BC2134A01F96E384000F121B /* XSGSubscriber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSGSubscriber.h; sourceTree = "<group>"; };
-		BC2134A11F96E384000F121B /* XSGSubscriber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSGSubscriber.m; sourceTree = "<group>"; };
-		BC2134A41F96F9AA000F121B /* UIButton+XSGSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+XSGSupport.h"; sourceTree = "<group>"; };
-		BC2134A51F96F9AA000F121B /* UIButton+XSGSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XSGSupport.m"; sourceTree = "<group>"; };
-		BC2134A71F9703CF000F121B /* XSGGenerator+XSGOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XSGGenerator+XSGOperators.h"; sourceTree = "<group>"; };
-		BC2134A81F9703CF000F121B /* XSGGenerator+XSGOperators.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XSGGenerator+XSGOperators.m"; sourceTree = "<group>"; };
-		BCCE8E9823EE8212006F81B8 /* XSGMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSGMap.h; sourceTree = "<group>"; };
-		BCCE8E9923EE8212006F81B8 /* XSGMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSGMap.m; sourceTree = "<group>"; };
-		BCCE8E9B23EEB666006F81B8 /* XSGFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSGFilter.h; sourceTree = "<group>"; };
-		BCCE8E9C23EEB666006F81B8 /* XSGFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSGFilter.m; sourceTree = "<group>"; };
-		BCCE8E9E23EEB932006F81B8 /* XSGFlatMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSGFlatMap.h; sourceTree = "<group>"; };
-		BCCE8E9F23EEB932006F81B8 /* XSGFlatMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSGFlatMap.m; sourceTree = "<group>"; };
 		BCCE8EA123EED91E006F81B8 /* TestMySignal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestMySignal-Bridging-Header.h"; sourceTree = "<group>"; };
 		BCCE8EA223EED91E006F81B8 /* SwiftAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAPITest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,13 +64,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		94C0123128B68474005D1EA8 /* DemoApp */ = {
+		94B9244A28B697610026F6F5 /* XSignal */ = {
 			isa = PBXGroup;
 			children = (
-				94C0123328B685D4005D1EA8 /* sources */,
-				94C0123228B685C7005D1EA8 /* resources */,
+				94B9244B28B697610026F6F5 /* XSignal.h */,
+				94B9244C28B697610026F6F5 /* sources */,
 			);
-			path = DemoApp;
+			name = XSignal;
+			path = ../XSignal;
+			sourceTree = "<group>";
+		};
+		94B9244C28B697610026F6F5 /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				94B9245728B697610026F6F5 /* XSGGenerator.h */,
+				94B9245B28B697610026F6F5 /* XSGGenerator.m */,
+				94B9245C28B697610026F6F5 /* XSGSubscriber.h */,
+				94B9245628B697610026F6F5 /* XSGSubscriber.m */,
+				94B9244D28B697610026F6F5 /* operators */,
+				94B9245828B697610026F6F5 /* extensions */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
+		94B9244D28B697610026F6F5 /* operators */ = {
+			isa = PBXGroup;
+			children = (
+				94B9244E28B697610026F6F5 /* XSGGenerator+XSGOperators.m */,
+				94B9244F28B697610026F6F5 /* XSGFlatMap.h */,
+				94B9245028B697610026F6F5 /* XSGFilter.m */,
+				94B9245128B697610026F6F5 /* XSGMap.m */,
+				94B9245228B697610026F6F5 /* XSGGenerator+XSGOperators.h */,
+				94B9245328B697610026F6F5 /* XSGFlatMap.m */,
+				94B9245428B697610026F6F5 /* XSGFilter.h */,
+				94B9245528B697610026F6F5 /* XSGMap.h */,
+			);
+			path = operators;
+			sourceTree = "<group>";
+		};
+		94B9245828B697610026F6F5 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94B9245928B697610026F6F5 /* UIButton+XSGSupport.h */,
+				94B9245A28B697610026F6F5 /* UIButton+XSGSupport.m */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		94C0123228B685C7005D1EA8 /* resources */ = {
@@ -97,33 +136,10 @@
 			path = sources;
 			sourceTree = "<group>";
 		};
-		94C2845228B688EC00DA9C4E /* operators */ = {
-			isa = PBXGroup;
-			children = (
-				BCCE8E9823EE8212006F81B8 /* XSGMap.h */,
-				BCCE8E9923EE8212006F81B8 /* XSGMap.m */,
-				BCCE8E9B23EEB666006F81B8 /* XSGFilter.h */,
-				BCCE8E9C23EEB666006F81B8 /* XSGFilter.m */,
-				BCCE8E9E23EEB932006F81B8 /* XSGFlatMap.h */,
-				BCCE8E9F23EEB932006F81B8 /* XSGFlatMap.m */,
-				BC2134A71F9703CF000F121B /* XSGGenerator+XSGOperators.h */,
-				BC2134A81F9703CF000F121B /* XSGGenerator+XSGOperators.m */,
-			);
-			path = operators;
-			sourceTree = "<group>";
-		};
-		94C2845328B688FF00DA9C4E /* extensions */ = {
-			isa = PBXGroup;
-			children = (
-				BC2134A41F96F9AA000F121B /* UIButton+XSGSupport.h */,
-				BC2134A51F96F9AA000F121B /* UIButton+XSGSupport.m */,
-			);
-			path = extensions;
-			sourceTree = "<group>";
-		};
 		BC21347B1F96E1D8000F121B = {
 			isa = PBXGroup;
 			children = (
+				94B9244A28B697610026F6F5 /* XSignal */,
 				BC2134861F96E1D8000F121B /* TestMySignal */,
 				BC2134851F96E1D8000F121B /* Products */,
 			);
@@ -140,23 +156,10 @@
 		BC2134861F96E1D8000F121B /* TestMySignal */ = {
 			isa = PBXGroup;
 			children = (
-				E409F3A823E162B9008FC503 /* XSignal */,
-				94C0123128B68474005D1EA8 /* DemoApp */,
+				94C0123328B685D4005D1EA8 /* sources */,
+				94C0123228B685C7005D1EA8 /* resources */,
 			);
 			path = TestMySignal;
-			sourceTree = "<group>";
-		};
-		E409F3A823E162B9008FC503 /* XSignal */ = {
-			isa = PBXGroup;
-			children = (
-				BC21349D1F96E1F0000F121B /* XSGGenerator.h */,
-				BC21349E1F96E1F0000F121B /* XSGGenerator.m */,
-				BC2134A01F96E384000F121B /* XSGSubscriber.h */,
-				BC2134A11F96E384000F121B /* XSGSubscriber.m */,
-				94C2845228B688EC00DA9C4E /* operators */,
-				94C2845328B688FF00DA9C4E /* extensions */,
-			);
-			path = XSignal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,17 +235,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCCE8EA023EEB932006F81B8 /* XSGFlatMap.m in Sources */,
+				94B9245D28B697610026F6F5 /* XSGGenerator+XSGOperators.m in Sources */,
+				94B9246128B697610026F6F5 /* XSGSubscriber.m in Sources */,
 				BC21348C1F96E1D8000F121B /* ViewController.m in Sources */,
 				BCCE8EA323EED91E006F81B8 /* SwiftAPITest.swift in Sources */,
 				BC2134971F96E1D8000F121B /* main.m in Sources */,
-				BC21349F1F96E1F0000F121B /* XSGGenerator.m in Sources */,
-				BCCE8E9A23EE8212006F81B8 /* XSGMap.m in Sources */,
+				94B9246328B697610026F6F5 /* XSGGenerator.m in Sources */,
+				94B9245E28B697610026F6F5 /* XSGFilter.m in Sources */,
+				94B9246228B697610026F6F5 /* UIButton+XSGSupport.m in Sources */,
+				94B9245F28B697610026F6F5 /* XSGMap.m in Sources */,
+				94B9246028B697610026F6F5 /* XSGFlatMap.m in Sources */,
 				BC2134891F96E1D8000F121B /* AppDelegate.m in Sources */,
-				BC2134A61F96F9AA000F121B /* UIButton+XSGSupport.m in Sources */,
-				BC2134A91F9703CF000F121B /* XSGGenerator+XSGOperators.m in Sources */,
-				BCCE8E9D23EEB666006F81B8 /* XSGFilter.m in Sources */,
-				BC2134A21F96E384000F121B /* XSGSubscriber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,11 +389,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PB8M4Z5P78;
-				INFOPLIST_FILE = TestMySignal/DemoApp/resources/Info.plist;
+				INFOPLIST_FILE = TestMySignal/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brook.TestMySignal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/DemoApp/sources/TestMySignal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/sources/TestMySignal-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -404,11 +407,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PB8M4Z5P78;
-				INFOPLIST_FILE = TestMySignal/DemoApp/resources/Info.plist;
+				INFOPLIST_FILE = TestMySignal/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brook.TestMySignal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/DemoApp/sources/TestMySignal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/sources/TestMySignal-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
