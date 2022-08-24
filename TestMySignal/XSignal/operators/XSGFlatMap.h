@@ -6,13 +6,13 @@
 //  Copyright © 2020 Brook. All rights reserved.
 //
 
-#import "XSignal.h"
+#import "XSGGenerator.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XSGFlatMap : XSignal
+@interface XSGFlatMap : XSGGenerator
 
-- (instancetype)initWithUpstream:(XSignal *)upstream tranform:(XSignal *(^)(id))f;
+- (instancetype)initWithUpstream:(XSGGenerator *)upstream tranform:(XSGGenerator *(^)(id))tranform;
 
 @end
 

@@ -10,10 +10,10 @@
 
 @implementation XSGFlatMap
 
-- (instancetype)initWithUpstream:(XSignal *)upstream tranform:(XSignal * _Nonnull (^)(id _Nonnull))f {
-    return [super initWithGenerator:^XDisposable _Nullable(XSubscriber * _Nonnull subscriber) {
+- (instancetype)initWithUpstream:(XSGGenerator *)upstream tranform:(XSGGenerator * _Nonnull (^)(id _Nonnull))tranform {
+    return [super initWithGenerator:^XSGDisposable _Nullable(XSGSubscriber * _Nonnull subscriber) {
         return [upstream subscribeWithValueHandler:^(id next) {
-            XSignal *innerSignal = f(next);
+            XSGGenerator *innerSignal = tranform(next);
             /* XDisposable cancellable = */ [innerSignal subscribeWithValueHandler:^(id innerNext) {
                 [subscriber receiveValue:innerNext];
             } completionHandler:^(XSGCompletion *completion) {

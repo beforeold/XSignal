@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-let signal = XSignal { (sb) -> Any? in
+let signal = XSGGenerator { (sb) -> Any? in
     sb.receive(5)
     sb.receive(completion: .finished)
     return nil

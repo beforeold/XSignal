@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XSignal.h"
+#import "XSGGenerator.h"
 
 @interface UIButton (XSGSupport)
 
-@property (nonatomic, strong, readonly) XSignal *xsg_signal;
+@property (nonatomic, strong, readonly) XSGGenerator *xsg_generator;
 
 @end

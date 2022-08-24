@@ -1,5 +1,5 @@
 //
-//  XSubscriber.h
+//  XSGSubscriber.h
 //  TestMySignal
 //
 //  Created by Brook on 2017/10/18.
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface XSubscriber : NSObject
+@interface XSGSubscriber : NSObject
 
 - (instancetype)initWithValueHandler:(void(^_Nullable)(id))valueHandler
                   completionHandler:(void(^_Nullable)(XSGCompletion *))completionHandler;

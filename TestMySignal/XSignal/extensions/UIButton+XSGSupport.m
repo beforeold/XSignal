@@ -8,18 +8,18 @@
 
 #import "UIButton+XSGSupport.h"
 #import <objc/runtime.h>
-#import "XSignal.h"
-#import "XSubscriber.h"
+#import "XSGGenerator.h"
+#import "XSGSubscriber.h"
 
-@interface XButtonTargetAction : NSObject
+@interface XSGButtonTargetAction : NSObject
 
-@property (nonatomic, weak) XSubscriber *subscriber;
+@property (nonatomic, weak) XSGSubscriber *subscriber;
 
 - (void)onClick:(id)sender;
 
 @end
 
-@implementation XButtonTargetAction
+@implementation XSGButtonTargetAction
 
 - (void)onClick:(id)sender {
     [self.subscriber receiveValue:sender];
@@ -28,20 +28,20 @@
 @end
 
 @implementation UIButton (XSGSupport)
-- (XSignal *)xsg_signal {
-    XSignal *signal = objc_getAssociatedObject(self, _cmd);
+- (XSGGenerator *)xsg_generator {
+    XSGGenerator *signal = objc_getAssociatedObject(self, _cmd);
     if (!signal) {
-        signal = [self x_createSignal];
+        signal = [self xsg_createSignal];
         objc_setAssociatedObject(self, _cmd, signal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     
     return signal;
 }
 
-- (XSignal *)x_createSignal {
+- (XSGGenerator *)xsg_createSignal {
     __weak typeof(self) weakSelf = self;
-    XSignal *signal = [[XSignal alloc] initWithGenerator:^XDisposable(XSubscriber *subscriber) {
-        XButtonTargetAction *holder = [[XButtonTargetAction alloc] init];
+    XSGGenerator *signal = [[XSGGenerator alloc] initWithGenerator:^XSGDisposable(XSGSubscriber *subscriber) {
+        XSGButtonTargetAction *holder = [[XSGButtonTargetAction alloc] init];
         holder.subscriber = subscriber;
         [weakSelf addTarget:holder action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         return holder;

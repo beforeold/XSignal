@@ -13,10 +13,10 @@
 		BC2134911F96E1D8000F121B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2134901F96E1D8000F121B /* Assets.xcassets */; };
 		BC2134941F96E1D8000F121B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2134921F96E1D8000F121B /* LaunchScreen.storyboard */; };
 		BC2134971F96E1D8000F121B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134961F96E1D8000F121B /* main.m */; };
-		BC21349F1F96E1F0000F121B /* XSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21349E1F96E1F0000F121B /* XSignal.m */; };
-		BC2134A21F96E384000F121B /* XSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A11F96E384000F121B /* XSubscriber.m */; };
+		BC21349F1F96E1F0000F121B /* XSGGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21349E1F96E1F0000F121B /* XSGGenerator.m */; };
+		BC2134A21F96E384000F121B /* XSGSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A11F96E384000F121B /* XSGSubscriber.m */; };
 		BC2134A61F96F9AA000F121B /* UIButton+XSGSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A51F96F9AA000F121B /* UIButton+XSGSupport.m */; };
-		BC2134A91F9703CF000F121B /* XSignal+XOperators.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A81F9703CF000F121B /* XSignal+XOperators.m */; };
+		BC2134A91F9703CF000F121B /* XSGGenerator+XSGOperators.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2134A81F9703CF000F121B /* XSGGenerator+XSGOperators.m */; };
 		BCCE8E9A23EE8212006F81B8 /* XSGMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE8E9923EE8212006F81B8 /* XSGMap.m */; };
 		BCCE8E9D23EEB666006F81B8 /* XSGFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE8E9C23EEB666006F81B8 /* XSGFilter.m */; };
 		BCCE8EA023EEB932006F81B8 /* XSGFlatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE8E9F23EEB932006F81B8 /* XSGFlatMap.m */; };
@@ -34,15 +34,14 @@
 		BC2134931F96E1D8000F121B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC2134951F96E1D8000F121B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC2134961F96E1D8000F121B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BC21349D1F96E1F0000F121B /* XSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSignal.h; sourceTree = "<group>"; };
-		BC21349E1F96E1F0000F121B /* XSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSignal.m; sourceTree = "<group>"; };
-		BC2134A01F96E384000F121B /* XSubscriber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSubscriber.h; sourceTree = "<group>"; };
-		BC2134A11F96E384000F121B /* XSubscriber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSubscriber.m; sourceTree = "<group>"; };
-		BC2134A31F96F33A000F121B /* IntroToReactive.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = IntroToReactive.md; sourceTree = "<group>"; };
+		BC21349D1F96E1F0000F121B /* XSGGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSGGenerator.h; sourceTree = "<group>"; };
+		BC21349E1F96E1F0000F121B /* XSGGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSGGenerator.m; sourceTree = "<group>"; };
+		BC2134A01F96E384000F121B /* XSGSubscriber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSGSubscriber.h; sourceTree = "<group>"; };
+		BC2134A11F96E384000F121B /* XSGSubscriber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSGSubscriber.m; sourceTree = "<group>"; };
 		BC2134A41F96F9AA000F121B /* UIButton+XSGSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+XSGSupport.h"; sourceTree = "<group>"; };
 		BC2134A51F96F9AA000F121B /* UIButton+XSGSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XSGSupport.m"; sourceTree = "<group>"; };
-		BC2134A71F9703CF000F121B /* XSignal+XOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XSignal+XOperators.h"; sourceTree = "<group>"; };
-		BC2134A81F9703CF000F121B /* XSignal+XOperators.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XSignal+XOperators.m"; sourceTree = "<group>"; };
+		BC2134A71F9703CF000F121B /* XSGGenerator+XSGOperators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XSGGenerator+XSGOperators.h"; sourceTree = "<group>"; };
+		BC2134A81F9703CF000F121B /* XSGGenerator+XSGOperators.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XSGGenerator+XSGOperators.m"; sourceTree = "<group>"; };
 		BCCE8E9823EE8212006F81B8 /* XSGMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSGMap.h; sourceTree = "<group>"; };
 		BCCE8E9923EE8212006F81B8 /* XSGMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSGMap.m; sourceTree = "<group>"; };
 		BCCE8E9B23EEB666006F81B8 /* XSGFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSGFilter.h; sourceTree = "<group>"; };
@@ -64,6 +63,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94C0123128B68474005D1EA8 /* DemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				94C0123328B685D4005D1EA8 /* sources */,
+				94C0123228B685C7005D1EA8 /* resources */,
+			);
+			path = DemoApp;
+			sourceTree = "<group>";
+		};
+		94C0123228B685C7005D1EA8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC2134951F96E1D8000F121B /* Info.plist */,
+				BC21348D1F96E1D8000F121B /* Main.storyboard */,
+				BC2134901F96E1D8000F121B /* Assets.xcassets */,
+				BC2134921F96E1D8000F121B /* LaunchScreen.storyboard */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		94C0123328B685D4005D1EA8 /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				BC2134961F96E1D8000F121B /* main.m */,
+				BCCE8EA223EED91E006F81B8 /* SwiftAPITest.swift */,
+				BC2134871F96E1D8000F121B /* AppDelegate.h */,
+				BC2134881F96E1D8000F121B /* AppDelegate.m */,
+				BC21348A1F96E1D8000F121B /* ViewController.h */,
+				BC21348B1F96E1D8000F121B /* ViewController.m */,
+				BCCE8EA123EED91E006F81B8 /* TestMySignal-Bridging-Header.h */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
+		94C2845228B688EC00DA9C4E /* operators */ = {
+			isa = PBXGroup;
+			children = (
+				BCCE8E9823EE8212006F81B8 /* XSGMap.h */,
+				BCCE8E9923EE8212006F81B8 /* XSGMap.m */,
+				BCCE8E9B23EEB666006F81B8 /* XSGFilter.h */,
+				BCCE8E9C23EEB666006F81B8 /* XSGFilter.m */,
+				BCCE8E9E23EEB932006F81B8 /* XSGFlatMap.h */,
+				BCCE8E9F23EEB932006F81B8 /* XSGFlatMap.m */,
+				BC2134A71F9703CF000F121B /* XSGGenerator+XSGOperators.h */,
+				BC2134A81F9703CF000F121B /* XSGGenerator+XSGOperators.m */,
+			);
+			path = operators;
+			sourceTree = "<group>";
+		};
+		94C2845328B688FF00DA9C4E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC2134A41F96F9AA000F121B /* UIButton+XSGSupport.h */,
+				BC2134A51F96F9AA000F121B /* UIButton+XSGSupport.m */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		BC21347B1F96E1D8000F121B = {
 			isa = PBXGroup;
 			children = (
@@ -84,18 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				E409F3A823E162B9008FC503 /* XSignal */,
-				BC2134A31F96F33A000F121B /* IntroToReactive.md */,
-				BC2134871F96E1D8000F121B /* AppDelegate.h */,
-				BC2134881F96E1D8000F121B /* AppDelegate.m */,
-				BC21348A1F96E1D8000F121B /* ViewController.h */,
-				BC21348B1F96E1D8000F121B /* ViewController.m */,
-				BC21348D1F96E1D8000F121B /* Main.storyboard */,
-				BC2134901F96E1D8000F121B /* Assets.xcassets */,
-				BC2134921F96E1D8000F121B /* LaunchScreen.storyboard */,
-				BC2134951F96E1D8000F121B /* Info.plist */,
-				BC2134961F96E1D8000F121B /* main.m */,
-				BCCE8EA123EED91E006F81B8 /* TestMySignal-Bridging-Header.h */,
-				BCCE8EA223EED91E006F81B8 /* SwiftAPITest.swift */,
+				94C0123128B68474005D1EA8 /* DemoApp */,
 			);
 			path = TestMySignal;
 			sourceTree = "<group>";
@@ -103,20 +149,12 @@
 		E409F3A823E162B9008FC503 /* XSignal */ = {
 			isa = PBXGroup;
 			children = (
-				BC21349D1F96E1F0000F121B /* XSignal.h */,
-				BC21349E1F96E1F0000F121B /* XSignal.m */,
-				BCCE8E9823EE8212006F81B8 /* XSGMap.h */,
-				BCCE8E9923EE8212006F81B8 /* XSGMap.m */,
-				BCCE8E9B23EEB666006F81B8 /* XSGFilter.h */,
-				BCCE8E9C23EEB666006F81B8 /* XSGFilter.m */,
-				BCCE8E9E23EEB932006F81B8 /* XSGFlatMap.h */,
-				BCCE8E9F23EEB932006F81B8 /* XSGFlatMap.m */,
-				BC2134A71F9703CF000F121B /* XSignal+XOperators.h */,
-				BC2134A81F9703CF000F121B /* XSignal+XOperators.m */,
-				BC2134A41F96F9AA000F121B /* UIButton+XSGSupport.h */,
-				BC2134A51F96F9AA000F121B /* UIButton+XSGSupport.m */,
-				BC2134A01F96E384000F121B /* XSubscriber.h */,
-				BC2134A11F96E384000F121B /* XSubscriber.m */,
+				BC21349D1F96E1F0000F121B /* XSGGenerator.h */,
+				BC21349E1F96E1F0000F121B /* XSGGenerator.m */,
+				BC2134A01F96E384000F121B /* XSGSubscriber.h */,
+				BC2134A11F96E384000F121B /* XSGSubscriber.m */,
+				94C2845228B688EC00DA9C4E /* operators */,
+				94C2845328B688FF00DA9C4E /* extensions */,
 			);
 			path = XSignal;
 			sourceTree = "<group>";
@@ -147,6 +185,7 @@
 		BC21347C1F96E1D8000F121B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XSG;
 				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = Brook;
 				TargetAttributes = {
@@ -197,13 +236,13 @@
 				BC21348C1F96E1D8000F121B /* ViewController.m in Sources */,
 				BCCE8EA323EED91E006F81B8 /* SwiftAPITest.swift in Sources */,
 				BC2134971F96E1D8000F121B /* main.m in Sources */,
-				BC21349F1F96E1F0000F121B /* XSignal.m in Sources */,
+				BC21349F1F96E1F0000F121B /* XSGGenerator.m in Sources */,
 				BCCE8E9A23EE8212006F81B8 /* XSGMap.m in Sources */,
 				BC2134891F96E1D8000F121B /* AppDelegate.m in Sources */,
 				BC2134A61F96F9AA000F121B /* UIButton+XSGSupport.m in Sources */,
-				BC2134A91F9703CF000F121B /* XSignal+XOperators.m in Sources */,
+				BC2134A91F9703CF000F121B /* XSGGenerator+XSGOperators.m in Sources */,
 				BCCE8E9D23EEB666006F81B8 /* XSGFilter.m in Sources */,
-				BC2134A21F96E384000F121B /* XSubscriber.m in Sources */,
+				BC2134A21F96E384000F121B /* XSGSubscriber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,11 +386,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PB8M4Z5P78;
-				INFOPLIST_FILE = TestMySignal/Info.plist;
+				INFOPLIST_FILE = TestMySignal/DemoApp/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brook.TestMySignal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/TestMySignal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/DemoApp/sources/TestMySignal-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -365,11 +404,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PB8M4Z5P78;
-				INFOPLIST_FILE = TestMySignal/Info.plist;
+				INFOPLIST_FILE = TestMySignal/DemoApp/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brook.TestMySignal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/TestMySignal-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestMySignal/DemoApp/sources/TestMySignal-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -3,7 +3,7 @@
 //
 
 
-#import "XSignal.h"
+#import "XSGGenerator.h"
 #import "UIButton+XSGSupport.h"
-#import "XSignal+XOperators.h"
-#import "XSubscriber.h"
+#import "XSGGenerator+XSGOperators.h"
+#import "XSGSubscriber.h"

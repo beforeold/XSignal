@@ -1,12 +1,12 @@
 //
-//  XSubscriber.m
+//  XSGSubscriber.m
 //  TestMySignal
 //
 //  Created by Brook on 2017/10/18.
 //  Copyright © 2017年 Brook. All rights reserved.
 //
 
-#import "XSubscriber.h"
+#import "XSGSubscriber.h"
 
 @interface XSGCompletion ()
 
@@ -35,7 +35,7 @@
 
 @end
 
-@interface XSubscriber ()
+@interface XSGSubscriber ()
 
 @property (nonatomic, copy, readonly) void(^_Nullable valueHandler)(id);
 @property (nonatomic, copy, readonly) void(^_Nullable completionHandler)(XSGCompletion *);
@@ -44,7 +44,7 @@
 
 @end
 
-@implementation XSubscriber
+@implementation XSGSubscriber
 
 - (instancetype)initWithValueHandler:(void (^_Nullable)(id))valueHandler
                   completionHandler:(void (^_Nullable)(XSGCompletion *))completionHandler

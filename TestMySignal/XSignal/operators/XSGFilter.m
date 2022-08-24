@@ -1,24 +1,23 @@
 //
-//  XSGMap.m
+//  XSGFilter.m
 //  TestMySignal
 //
 //  Created by brook.dinglan on 2020/2/8.
 //  Copyright © 2020 Brook. All rights reserved.
 //
 
-#import "XSGMap.h"
+#import "XSGFilter.h"
 
-@implementation XSGMap
+@implementation XSGFilter
 
-- (instancetype)initWithUpstream:(XSignal *)signal transform:(nonnull id  _Nonnull (^)(id _Nonnull))f {
-    self = [super initWithGenerator:^XDisposable _Nullable(XSubscriber * _Nonnull subscriber) {
+- (instancetype)initWithUpstream:(XSGGenerator *)signal filter:(BOOL(^)(id))f {
+    self = [super initWithGenerator:^XSGDisposable _Nullable(XSGSubscriber * _Nonnull subscriber) {
         return [signal subscribeWithValueHandler:^(id x) {
-            [subscriber receiveValue:f(x)];
+            if (f(x)) [subscriber receiveValue:x];
         } completionHandler:^(XSGCompletion *completion) {
             [subscriber receiveCompletion:completion];
         }];
     }];
-    
     return self;
 }
 
